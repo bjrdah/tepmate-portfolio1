@@ -5,7 +5,203 @@
     box-sizing: border-box;
 
 }
+:root{
+    --main-color:#10cab7;
+}
 body{
     font-family: 'Work Sans', sans-serif;
 }
+/* Start components */
+.special-heading{
+color:#b6c6d6b0;
+font-size: 100px;
+text-align: center;
+font-weight: 800;
+letter-spacing: -5px;
+margin: 0;
+}
+.special-heading + p{
+    margin-top:-30px;
+    text-align: center;
+    font-size: 20px;
+}
+@media(max-width:767px){
+    .special-heading{
+        font-size: 60px;
+
+    }
+    .special-heading + p{
+        margin-top: -20px;
+        font-size: 15px;
+
+    }
+}
+/* End components */
 /* End Global Rules */
+
+/* Star Container */
+.parent{
+    background-color: #eee;
+
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+/* Small */
+@media(min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/* Medium */
+@media(min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+/* Large */
+@media(min-width:1200px){
+    .container{
+        width:1170px;
+    }
+}
+/* End Container */
+/* Start header */
+header{
+    padding: 20px 20px 5px 20px;
+    margin-bottom: 0;
+    /* background-color: #ccc; */
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    position: relative;
+}
+
+.links:hover .menu{
+    display: block;
+}
+.links i{
+    font-size: 30px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+.links:hover i{
+    font-size: 35px;
+}
+.menu{
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    min-width: 200px;
+    top: calc(100% + 20px);
+    z-index: 1;
+}
+.menu::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+.menu li a{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: .3s;
+}
+.menu li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+}
+.menu li a:hover{
+    padding-left: 25px;
+    color:var(--main-color);
+    font-weight:800;
+}
+
+/* Start logo */
+.logo{
+    width: 90px;
+    height: 65px;
+    border-radius: 20%;
+}
+/* End logo */
+/* End header */
+/* Start landing */
+.landing{
+    background-image: url(../images/wallpaperuse.com-white-wallpaper-4352.jpg);
+    background-size: cover;
+    height:calc(100vh - 120px);
+    position: relative;
+}
+.intro-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+h1{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 50px;
+    color:var(--main-color);
+}
+.intro-text p{
+    font-size: 19px;
+    line-height: 1.8;
+    text-transform: capitalize;
+}
+.name{
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End landing */
+/* Start Features */
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.features .feat{
+    padding: 20px;
+    text-align: center;
+}
+.features .feat i{
+    color: var(--main-color);
+    font-size: 60px;
+}
+.features .feat h3{
+    font-weight: 800;
+    margin: 15px 0 30px;
+}
+.features .feat p{
+    line-height: 1.8;
+    color: #656565;
+    font-size: 18px
+}
+/* End Features */
