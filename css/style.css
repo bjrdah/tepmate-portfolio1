@@ -13,7 +13,7 @@ body{
 }
 /* Start components */
 .special-heading{
-color:#b6c6d6b0;
+color:#ebeced;
 font-size: 100px;
 text-align: center;
 font-weight: 800;
@@ -205,3 +205,79 @@ h1{
     font-size: 18px
 }
 /* End Features */
+/* Start services */
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.services .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    margin-top: 100px;
+}
+.srv{
+    display: flex;
+    margin-bottom: 40px;
+}
+@media(max-width:767px){
+    .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.srv i{
+    font-size: 30px;
+    color:var(--main-color);
+    flex-basis: 60px;
+}
+.srv .text{
+    flex: 1;
+}
+.srv .text h3{
+    margin: 0 0 30px;
+}
+.srv .text p{
+    color: #444;
+    line-height: 1.6;
+}
+
+
+.col  .image{
+    text-align: center;
+    position: relative;
+
+ 
+
+    /* width: 100%; */
+}
+
+.col .image img{
+    height:  300px;
+
+    
+    
+}
+
+.col .image::before{
+    content: "";
+    background-color: var(--main-color);
+    top: -40px;
+    right: 10%;
+    width: 118px;
+    height: calc(100% + 80px);
+    position: absolute;
+    z-index: -1;
+}
+@media(max-width:767px){
+    .col .image::before{
+    content: "";
+    background-color: var(--main-color);
+    top: 80%;
+    right: 10%;
+    width: 80%;
+    height: 80px;
+    position: absolute;
+    z-index: -1;
+    }
+}
+/* End services */
