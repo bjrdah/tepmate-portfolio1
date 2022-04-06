@@ -7,9 +7,12 @@
 }
 :root{
     --main-color:#10cab7;
+    scroll-behavior: smooth;
+
 }
 body{
     font-family: 'Work Sans', sans-serif;
+    
 }
 /* Start components */
 .special-heading{
@@ -209,6 +212,7 @@ h1{
 .services{
     padding-top: 60px;
     padding-bottom: 60px;
+    
 }
 .services .services-content{
     display: grid;
@@ -360,7 +364,7 @@ z-index: -1;
 }
 
   
-}
+
 .about-content .image img{
     max-width: 100%;
 }
@@ -398,4 +402,90 @@ z-index: -1;
         padding: 30px;
         
     }
-/* End about */
+}
+/* end about */
+/* start contact */
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6; 
+}
+.contact .info{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.contact .info .label{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    letter-spacing: -1px;
+}
+.contact .info  a{
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: 100px;
+        color: darkcyan;
+}
+.contact .info .social{
+    margin-top: 15px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #777;
+}
+.contact .social p{
+ 
+    font-size: 18px;
+}
+.contact .info .social i{
+    font-size: 24px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+.contact .info .social i:hover{
+    color: var(--main-color);
+}
+@media(max-width:767px){
+    .contact .info .label{
+        font-size: 20px;
+    }
+    .contact .info  a{
+        font-size: 18px;
+        margin-left: 35px;
+    }
+    .contact .info{
+        padding-top: 30px;
+    }
+    .contact .social p{
+ 
+        font-size: 14px;
+    }
+    .contact .info .social i{
+        font-size: 18px;
+        margin-left: 0.8em;
+    }
+
+    .contact .info .social{
+        margin-left: 70px;
+    }
+    
+}
+
+/* end contact */
+ /* start footer */
+ .footer{
+     background-color: darkcyan;
+     color: white;
+     padding: 25px 10px;
+     text-align: center;
+     font-size: 18px;
+ }
+ .footer span{
+     font-weight: bold;
+     color: var(--main-color);
+ }
+ /* end footer */
