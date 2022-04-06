@@ -281,3 +281,121 @@ h1{
     }
 }
 /* End services */
+/* Start portfolio */
+.portfolio{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.porfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+
+.porfolio-content .card{
+    background-color: white;
+}
+.porfolio-content .card img{
+    max-width: 100%;
+    min-width: 100%;
+    
+}
+.porfolio-content .card .info{
+    padding: 20px;
+}
+.porfolio-content .card .info h3{
+    margin: 0;
+}
+@media(max-width:767px){
+    .porfolio-content .card .info h3{
+       text-align: center;
+    }
+}
+.porfolio-content .card .info p{
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #777;
+}
+/* End portfolio */
+/* Start about */
+.about{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.about-content{
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-content .image{
+    position: relative;
+    width: 375px;
+    height: 375px;
+  
+}
+.about-content .image::before{
+content: "";
+position: absolute;
+width: 100px;
+background-color: #ebeced;
+height: calc(100% + 80px);
+top: -40px;
+left: -25px;
+z-index: -1;
+}
+.about-content .image::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    /* background-color: #9e9e9e; */
+    border-left: 108px solid var(--main-color);
+    border-bottom: 60px solid var(--main-color);
+    right: -160px;
+    bottom: 121px;
+    z-index: -1;
+}
+
+  
+}
+.about-content .image img{
+    max-width: 100%;
+}
+.about-content .text{
+    flex-basis: calc(100% - 600px);
+}
+.about-content .text p:first-of-type{
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.about-content .text hr{
+    width: 50%;
+    border-color: var(--main-color);
+    
+    display: inline-block;
+    
+}
+.about-content .text p:last-of-type{
+    line-height: 2;
+    color: #777;
+}
+@media(max-width:991px){
+    .about-content .image::before,
+    .about-content .image::after{
+        display: none;
+    }
+    .about-content{
+        flex-direction: column;
+    }
+    .about-content .image{
+        margin: 0 auto 30px;
+    }
+    .about-content .text{
+        padding: 30px;
+        
+    }
+/* End about */
